@@ -5,6 +5,12 @@ class PlacesController < ApplicationController
     # render places/index view
   end
 
+    def show
+    # find a Company
+    @company = Company.find_by({ "id" => params["id"]})
+    # render companies/show view with details about Company
+  end
+
   def new
     # render places/new view with new place form
   end
